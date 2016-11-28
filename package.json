@@ -121,6 +121,8 @@
      * Sass configuration properties.
      */
     "sass" : {
+        "save":"${toolkit.name}/sass/save.scss",
+
         /**
          * The namespace to which this package's SASS corresponds. The default value of
          * "Ext" means that the files in ./sass/src (and ./sass/var) match classes in
@@ -131,7 +133,7 @@
          * then to style "Ext.panel.Panel" you would put SASS in
          * ./sass/src/Ext/panel/Panel.scss.
          */
-        "namespace": "Ext",
+        "namespace": "",
 
         /**
          * Comma-separated list of files or folders containing extra Sass. These
@@ -154,7 +156,7 @@
          */
         "etc": [
             "${package.dir}/sass/etc/all.scss"
-         ],
+        ],
 
         /**
          * Comma-separated list of folders containing Sass variable definitions
@@ -177,7 +179,8 @@
          * block before any files associated with JavaScript classes.
          */
         "var": [
-            "${package.dir}/sass/var"
+            "${package.dir}/sass/var",
+            "${package.dir}/${toolkit.name}/sass/var/sencha-themer-defaults.scss"
         ],
 
         /**
@@ -198,6 +201,8 @@
          */
         "src": [
             "${package.dir}/sass/src"
+        ,	"${package.dir}/${toolkit.name}/sass/save"
+
         ]
     },
 
